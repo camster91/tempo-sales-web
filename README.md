@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tempo Sales Web
 
-## Getting Started
+A modern sales and marketing website built with Next.js 16, React 19, and Tailwind CSS 4.
 
-First, run the development server:
+## Project Overview
+
+Tempo Sales Web is a high-performance marketing website designed for rapid content delivery and optimal user engagement. Built with the latest Next.js features, it provides a solid foundation for sales-focused web experiences.
+
+## Tech Stack
+
+### Frontend
+- **Next.js 16.2.2** - Latest Next.js with App Router
+- **React 19.2.4** - Latest React with improved concurrent features
+- **TypeScript 5** - Type-safe development
+- **Tailwind CSS 4** - Latest Tailwind with improved performance
+
+### Development Tools
+- **ESLint 9** - Code linting
+- **PostCSS** - CSS processing
+
+## Key Features
+
+- **App Router** - Modern Next.js routing with layouts and streaming
+- **Server Components** - Optimized rendering with React Server Components
+- **Tailwind CSS 4** - Utility-first styling with improved DX
+- **TypeScript** - Full type safety across the codebase
+- **Geist Font** - Modern typography from Vercel
+
+## Installation
+
+### Prerequisites
+- Node.js v18+ (v20+ recommended)
+- npm, yarn, pnpm, or bun
+
+### Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/camster91/tempo-sales-web.git
+cd tempo-sales-web
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Development
 
-## Learn More
+```bash
+# Run development server
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# Build for production
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Start production server
+npm start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Run linting
+npm run lint
+```
 
-## Deploy on Vercel
+### Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/           # Next.js App Router pages
+│   ├── layout.tsx # Root layout
+│   └── page.tsx   # Home page
+└── public/        # Static assets
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Customization
+
+1. Edit `src/app/page.tsx` to modify the home page
+2. Update `src/app/layout.tsx` for site-wide layout changes
+3. Add pages by creating new directories in `src/app/`
+
+## Deployment
+
+### Vercel (Recommended)
+
+The easiest deployment method:
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Docker
+
+```bash
+# Build
+docker build -t tempo-sales-web .
+
+# Run
+docker run -p 3000:3000 tempo-sales-web
+```
+
+### Static Export
+
+```bash
+# Configure next.config.ts for static export
+npm run build
+# Output in ./out directory
+```
+
+## Environment Variables
+
+Create a `.env.local` file for environment-specific configuration:
+
+```env
+# Example variables
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
+```
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm start` | Start production server |
+| `npm run lint` | Run ESLint |
+
+## Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+
+## License
+
+Developed by Cameron Ashley / Nexus AI
